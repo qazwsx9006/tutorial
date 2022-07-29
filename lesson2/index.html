@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+
+  <style>
+    div {
+      background-color: #f00;
+    }
+    div {
+      background-color: #999;
+    }
+
+    .box#cat {
+      background-color: #f0f;
+    }
+    .box {
+      background-color: #00f;
+    }
+    #cat {
+      background-color: #ff0;
+    }
+    #cat2 {
+      background-color: #a0f;
+    }
+  </style>
+
+  <body>
+    1. 權重 id > class > tag <br />2. 後面會覆蓋前面 <br />
+    3. 選取器越精準，權重越大。<br />
+    4. 直接寫在元素上的 style 權重也相對較大 <br />
+    5. !important 可以提高權重。但不建議使用。
+    <div>first div</div>
+    <div class="box">second div</div>
+    <div class="box" id="cat">third div</div>
+    <div class="box" id="cat2" style="background-color: #000">fourth div</div>
+
+    <hr />
+    <style>
+      .block {
+        display: block;
+        background-color: #0f0;
+        height: 50px;
+        width: 100px;
+      }
+      .block2 {
+        display: block;
+        background-color: #0ff;
+        height: 50px;
+        width: 100px;
+      }
+      .inline {
+        display: inline-block;
+        width: 100px;
+      }
+      .inline2 {
+        display: inline-block;
+      }
+    </style>
+    <div class="block">block div1</div>
+    <div class="block2">block div2</div>
+    <div class="inline">inline div1</div>
+    <div class="inline2">inline div2</div>
+  </body>
+</html>
